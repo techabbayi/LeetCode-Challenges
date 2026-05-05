@@ -8,5 +8,4 @@
 8        for i in range(len(nums)):
 9            for j in range(i+1, len(nums)):
 10                if nums[i] + nums[j] == target:
-11                    return [i, j]
-12
+11                    return [i,j]
