@@ -1,0 +1,18 @@
+1class Solution(object):
+2    def sortColors(self, nums):
+3        """
+4        :type nums: List[int]
+5        :rtype: None Do not return anything, modify nums in-place instead.
+6        """
+7        low, mid, high = 0, 0, len(nums) - 1
+8
+9        while mid <= high:
+10            if nums[mid] == 0:
+11                nums[low], nums[mid] = nums[mid], nums[low]
+12                low += 1
+13                mid += 1
+14            elif nums[mid] == 1:
+15                mid += 1
+16            else:
+17                nums[mid], nums[high] = nums[high], nums[mid]
+18                high -= 1
